@@ -1,4 +1,5 @@
 interface Formation {
-    name: string
-    school: string
+  id: number
+  name: string
+  school: string
 }
