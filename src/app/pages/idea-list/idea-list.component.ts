@@ -10,14 +10,14 @@ import {Idea} from '../../../_models/Idea';
 export class IdeaListComponent implements OnInit {
 
 
-  ideas?:Idea[]
+  ideas!:Idea[]
 
   constructor(
     private ideaService: IdeaService
   ) { }
 
   ngOnInit() {
-    this.ideas=this.ideaService.getIdeas();
+    this.ideas = this.ideaService.getIdeas();
   }
 
 }

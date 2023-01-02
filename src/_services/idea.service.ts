@@ -17,7 +17,7 @@ export class IdeaService {
     { id:8, idea: "Organiser des ateliers de bricolage pour enfants dans les bibliothèques" },
     { id:9, idea: "Lancer une plateforme de coaching en ligne pour aider les personnes à atteindre leurs objectifs" },
     { id:10, idea: "Développer une application de suivi de l'alimentation et de l'activité physique" }
-    ]    
+   ]
 
   constructor() { }
 
@@ -37,7 +37,7 @@ export class IdeaService {
     idea.id = maxId+1;
     this.ideas.push(idea);
   }
-  
+
 
   // Supression d'une idée
   deleteIdea(id: number) {
