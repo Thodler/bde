@@ -1,0 +1,3 @@
+interface Idea {
+  idea: string
+}
