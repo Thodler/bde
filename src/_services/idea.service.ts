@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Idea } from '../_models/Idea';
 
 @Injectable({
   providedIn: 'root'
 })
 export class IdeaService {
 
-  private ideas: Idea[] = [
+   ideas: Idea[] = [
     { id:1, idea: "Créer un service de cours en ligne pour apprendre les langues étrangères" },
     { id:2, idea: "Lancer une plateforme de location de voitures entre particuliers" },
     { id:3, idea: "Ouvrir une école de danse axée sur la pratique de la salsa" },
@@ -42,6 +43,5 @@ export class IdeaService {
   deleteIdea(id: number) {
     this.ideas = this.ideas.filter(i => i.id !== id);
   }
-
-
 }
+
