@@ -8,5 +8,5 @@ interface User {
   formation: Formation
   school_location: string
   password: string
-  roles: [string]
+  roles: string[]
 }
