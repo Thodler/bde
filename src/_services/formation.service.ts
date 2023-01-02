@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {Formation} from "../_models/Formation";
 
 @Injectable({
   providedIn: 'root'

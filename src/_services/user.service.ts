@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {FormationService} from "./formation.service";
+import {User} from "../_models/User";
 
 @Injectable({
   providedIn: 'root'
@@ -44,6 +45,19 @@ export class UserService {
       formation: this.formationService.getFormationById(2),
       school_location: "Madrid, Espagne",
       password: "mdpemma789",
+      roles: ["ROLE_ETUDIANT"]
+    },
+    {
+      id: 4,
+      firstname: "Elena",
+      lastname: "Sini",
+      username: "elena.sini777",
+      image: "https://picsum.photos/200",
+      birthday: new Date("2014-09-16"),
+      email: "emma.lopez@gmail.com",
+      formation: this.formationService.getFormationById(1),
+      school_location: "Ajaccio, Corse",
+      password: "password",
       roles: ["ROLE_ETUDIANT"]
     }
   ]
