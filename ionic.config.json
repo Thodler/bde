@@ -1,0 +1,7 @@
+{
+  "name": "bde",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
