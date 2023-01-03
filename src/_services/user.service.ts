@@ -16,7 +16,7 @@ export class UserService {
       image: "https://picsum.photos/200",
       birthday: new Date("1998-03-15"),
       email: "marie.dupont@gmail.com",
-      formation: this.formationService.getFormationById(2),
+      formation: this.formationService.getFormationById(2)!,
       school_location: "Paris, France",
       password: "motdepasse123",
       roles: ["ROLE_BDE", "ROLE_ETUDIANT"]
@@ -29,7 +29,7 @@ export class UserService {
       image: "https://picsum.photos/200",
       birthday: new Date("1996-09-11"),
       email: "paul.martin@gmail.com",
-      formation: this.formationService.getFormationById(6),
+      formation: this.formationService.getFormationById(6)!,
       school_location: "Lyon, France",
       password: "mdpmdp456",
       roles: ["ROLE_ETUDIANT"]
@@ -42,7 +42,7 @@ export class UserService {
       image: "https://picsum.photos/200",
       birthday: new Date("1999-01-20"),
       email: "emma.lopez@gmail.com",
-      formation: this.formationService.getFormationById(2),
+      formation: this.formationService.getFormationById(2)!,
       school_location: "Madrid, Espagne",
       password: "mdpemma789",
       roles: ["ROLE_ETUDIANT"]
@@ -55,7 +55,7 @@ export class UserService {
       image: "https://picsum.photos/200",
       birthday: new Date("2014-09-16"),
       email: "emma.lopez@gmail.com",
-      formation: this.formationService.getFormationById(1),
+      formation: this.formationService.getFormationById(1)!,
       school_location: "Ajaccio, Corse",
       password: "password",
       roles: ["ROLE_ETUDIANT"]
@@ -68,7 +68,7 @@ export class UserService {
       image: "https://picsum.photos/200",
       birthday: new Date("2019-12-23"),
       email: "livia@mail.com",
-      formation: this.formationService.getFormationById(2),
+      formation: this.formationService.getFormationById(2)!,
       school_location: "Ajaccio, Corse",
       password: "mdp",
       roles: ["ROLE_ETUDIANT"]

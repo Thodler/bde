@@ -14,6 +14,7 @@ import {NewsFeedComponent} from "./pages/news-feed/news-feed.component";
 import { IdeaListComponent } from './pages/idea-list/idea-list.component';
 import { IdeaAddComponent } from './pages/idea-add/idea-add.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {UserProfilComponent} from "./helpers/user-profil/user-profil.component";
 
 @NgModule({
   declarations: [
@@ -22,10 +23,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     UsersListComponent,
     FooterComponent,
-      IdeaListComponent,
-      IdeaAddComponent,
+    IdeaListComponent,
+    IdeaAddComponent,
     FooterComponent,
-    NewsFeedComponent
+    NewsFeedComponent,
+    UserProfilComponent
   ],
   imports: [
     BrowserModule,
