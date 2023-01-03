@@ -11,6 +11,7 @@ import {LoginComponent} from "./pages/login/login.component";
 import {UsersListComponent} from "./pages/users-list/users-list.component";
 import {ReactiveFormsModule} from "@angular/forms";
 import {FooterComponent} from "./helpers/footer/footer.component";
+import {NewsFeedComponent} from "./pages/news-feed/news-feed.component";
 
 @NgModule({
   declarations: [
@@ -18,9 +19,15 @@ import {FooterComponent} from "./helpers/footer/footer.component";
     HeaderComponent,
     LoginComponent,
     UsersListComponent,
-    FooterComponent
+    FooterComponent,
+    NewsFeedComponent
   ],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    ReactiveFormsModule
+  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
