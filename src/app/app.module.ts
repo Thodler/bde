@@ -9,15 +9,18 @@ import { AppRoutingModule } from './app-routing.module';
 import {HeaderComponent} from "./helpers/header/header.component";
 import {LoginComponent} from "./pages/login/login.component";
 import {UsersListComponent} from "./pages/users-list/users-list.component";
+import {ReactiveFormsModule} from "@angular/forms";
+import {FooterComponent} from "./helpers/footer/footer.component";
 
 @NgModule({
-    declarations: [
-      AppComponent,
-      HeaderComponent,
-      LoginComponent,
-      UsersListComponent
-    ],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    LoginComponent,
+    UsersListComponent,
+    FooterComponent
+  ],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ReactiveFormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
