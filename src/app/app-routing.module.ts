@@ -11,8 +11,6 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'users', component: UsersListComponent},
   { path: 'newsfeed', component: NewsFeedComponent},
-
-
   { path: 'users', component: UsersListComponent},
   { path: 'ideas', component: IdeaListComponent},
   { path: 'ideaAdd', component: IdeaAddComponent}
