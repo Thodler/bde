@@ -59,6 +59,19 @@ export class UserService {
       school_location: "Ajaccio, Corse",
       password: "password",
       roles: ["ROLE_ETUDIANT"]
+    },
+    {
+      id: 5,
+      firstname: "Livia",
+      lastname: "Roccati",
+      username: "Zouzette",
+      image: "https://picsum.photos/200",
+      birthday: new Date("2019-12-23"),
+      email: "livia@mail.com",
+      formation: this.formationService.getFormationById(2),
+      school_location: "Ajaccio, Corse",
+      password: "mdp",
+      roles: ["ROLE_ETUDIANT"]
     }
   ]
 

@@ -25,12 +25,13 @@ export class IdeaService {
   getIdeas():Idea[] {
     return this.ideas;
   }
+  
 
   // Ajout d'une nouvelle idée
   addIdea(idea: Idea) {
     const maxId = this.ideas.reduce((prev, current) => (prev.id > current.id) ? prev : current).id;
     idea.id = maxId+1;
-    this.ideas.push(idea);
+    this.ideas.unshift(idea);
   }
 
   // Supression d'une idée
