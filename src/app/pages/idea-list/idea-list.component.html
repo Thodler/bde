@@ -3,7 +3,7 @@
 <ion-content class="ion-padding">
   <h1>Boîte à idées</h1>
 
-  <ion-card *ngFor="let idea of ideas">
+  <ion-card *ngFor="let idea of ideas; let index = index">
     <ion-card-header>
       <ion-card-title>Nouvelle Idée</ion-card-title>
     </ion-card-header>
@@ -12,6 +12,6 @@
       {{idea.idea}}
     </ion-card-content>
 
-    <ion-button fill="clear">Supprimer</ion-button>
+    <ion-button fill="clear" (click)="deleteIdea(index)">Supprimer</ion-button>
   </ion-card>
 </ion-content>

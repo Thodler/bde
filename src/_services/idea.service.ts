@@ -41,7 +41,7 @@ export class IdeaService {
 
   // Supression d'une idée
   deleteIdea(id: number) {
-    this.ideas = this.ideas.filter(i => i.id !== id);
+    this.ideas.splice(id, 1);
   }
 }
 

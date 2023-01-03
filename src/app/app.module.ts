@@ -9,13 +9,15 @@ import { AppRoutingModule } from './app-routing.module';
 import {HeaderComponent} from "./helpers/header/header.component";
 import {LoginComponent} from "./pages/login/login.component";
 import {UsersListComponent} from "./pages/users-list/users-list.component";
+import { IdeaListComponent } from './pages/idea-list/idea-list.component';
 
 @NgModule({
     declarations: [
       AppComponent,
       HeaderComponent,
       LoginComponent,
-      UsersListComponent
+      UsersListComponent,
+      IdeaListComponent
     ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
