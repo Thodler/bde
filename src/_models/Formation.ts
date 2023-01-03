@@ -1,4 +1,5 @@
-interface Formation {
-    name: string
-    school: string
+export interface Formation {
+  id: number
+  name: string
+  school: string
 }
