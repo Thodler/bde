@@ -10,6 +10,8 @@ import {HeaderComponent} from "./helpers/header/header.component";
 import {LoginComponent} from "./pages/login/login.component";
 import {UsersListComponent} from "./pages/users-list/users-list.component";
 import { IdeaListComponent } from './pages/idea-list/idea-list.component';
+import { IdeaAddComponent } from './pages/idea-add/idea-add.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -17,9 +19,15 @@ import { IdeaListComponent } from './pages/idea-list/idea-list.component';
       HeaderComponent,
       LoginComponent,
       UsersListComponent,
-      IdeaListComponent
+      IdeaListComponent,
+      IdeaAddComponent,
     ],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    ReactiveFormsModule,
+  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

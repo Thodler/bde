@@ -26,18 +26,12 @@ export class IdeaService {
     return this.ideas;
   }
 
-  // récupération d'un élément du tableau
-  getOneIdea(id: number):Idea | undefined {
-    return this.ideas.find(i => i.id === id);
-  }
-
   // Ajout d'une nouvelle idée
   addIdea(idea: Idea) {
     const maxId = this.ideas.reduce((prev, current) => (prev.id > current.id) ? prev : current).id;
     idea.id = maxId+1;
     this.ideas.push(idea);
   }
-
 
   // Supression d'une idée
   deleteIdea(id: number) {
