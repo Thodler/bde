@@ -1,4 +1,4 @@
-<ion-content class="ion-padding">
+<ion-content class="ion-padding-horizontal">
   <h1>Bureau des élèves</h1>
   <p>
     Notre application pour BDE est conçue pour faciliter la gestion des événements et des activités du BDE de votre école.
@@ -6,6 +6,7 @@
     communiquer avec les membres du BDE et les étudiants."
   </p>
   <hr>
+
   <form [formGroup]="credentialForm" (ngSubmit)="onSubmit()">
     <ion-item fill="outline" class="ion-margin-vertical">
       <ion-label position="floating">email</ion-label>
@@ -17,7 +18,7 @@
       <ion-input placeholder="Mot de passe" name="password" formControlName="password"></ion-input>
     </ion-item>
 
-    <ion-button expand="block" class="ion-margin-vertical" [routerLink]="['/newsfeed']">Connexion</ion-button>
+    <ion-button expand="block" class="ion-margin-vertical" [routerLink]="['/newsFeed']">Connexion</ion-button>
   </form>
 </ion-content>
 
