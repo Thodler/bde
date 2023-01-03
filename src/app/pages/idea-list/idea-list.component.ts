@@ -20,4 +20,8 @@ export class IdeaListComponent implements OnInit {
     this.ideas = this.ideaService.getIdeas();
   }
 
+  deleteIdea(id: number) {
+    this.ideaService.deleteIdea(id);
+  }
+
 }

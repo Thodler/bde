@@ -1,10 +1,6 @@
 import {User} from "./User";
+import {Post} from "./Post";
 
-export interface Event {
-    title: string
-    description: string
-    suscribe: User[]
-    location: string
-    author:User
-    date: Date
-  }
+export interface Event extends Post {
+    subscribe: User[]
+}
