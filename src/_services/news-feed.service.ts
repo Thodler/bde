@@ -51,7 +51,7 @@ export class NewsFeedService {
   ]
   constructor(private userService: UserService) { }
 
-  getAllNewsFeed(): NewsFeed[]
+  getNewsFeed(): NewsFeed[]
   {
     return this.newsFeed
   }
