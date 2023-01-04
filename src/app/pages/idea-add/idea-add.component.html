@@ -3,9 +3,12 @@
   <form [formGroup]="formIdea" (ngSubmit)="onSubmit()">
     <ion-item>
       <ion-label>Mon idée : </ion-label>
-      <ion-textarea placeholder="" name="idea" formControlName="idea" [autoGrow]=true>
+        <ion-textarea placeholder="" name="idea" formControlName="idea" [autoGrow]=true>
       </ion-textarea>
     </ion-item>
-    <ion-button fill="clear" (click)="presentToast('middle')">Poster</ion-button>
+    <ion-button
+      fill="clear"
+      (click)="presentToast('middle')"
+      [disabled]="formIdea.invalid">Poster</ion-button>
   </form>
 </ion-content>

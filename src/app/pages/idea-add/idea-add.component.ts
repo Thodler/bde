@@ -28,7 +28,7 @@ export class IdeaAddComponent implements OnInit {
 
   initForm() {
     return this.fb.group({
-      idea:["", Validators.required]
+      idea:[null, [Validators.required]]
     });
   }
 
