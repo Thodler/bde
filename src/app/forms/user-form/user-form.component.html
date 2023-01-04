@@ -1,8 +1,13 @@
- <ion-list>
-   <ion-item>
-     <ion-label>Photo de profil</ion-label>
-     <ion-input value="https://picsum.photos/seed/picsum/400/200"></ion-input>
-   </ion-item>
+
+<ion-content>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="addPhotoToGallery()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-list>
+
 
     <ion-item>
       <ion-label>Prenom</ion-label>
@@ -34,3 +39,10 @@
      <ion-input placeholder="Pseudo"></ion-input>
    </ion-item>
  </ion-list>
+<ion-content>
+  <ion-buttons class="ion-padding-vertical">
+    <ion-button color="danger" [routerLink]="['/userProfil']">Annuler</ion-button>
+    <ion-button color="primary">Modifier</ion-button>
+  </ion-buttons>
+</ion-content>
+

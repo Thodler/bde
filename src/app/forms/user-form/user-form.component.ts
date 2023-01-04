@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup} from "@angular/forms";
+import {PhotoService} from "../../../_services/photo.service";
 
 @Component({
   selector: 'app-user-form',
@@ -7,8 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserFormComponent implements OnInit {
 
-  constructor() { }
+  formUser!: FormGroup
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private photoService: PhotoService
+  ) { }
 
   ngOnInit() {}
 
+  addPhotoToGallery() {
+    this.photoService.addNewToGallery();
+  }
 }
