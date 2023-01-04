@@ -9,26 +9,23 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <ion-buttons>
-        <ion-button fill="clear">
-          <ion-icon slot="start" name="person-add"></ion-icon>Ajouter un utilisateur
-        </ion-button>
-        <ion-button fill="clear">
-          <ion-icon slot="start" name="person-add"></ion-icon>Ajouter un evenement
-        </ion-button>
-        <ion-button fill="clear">
-          <ion-icon slot="start"></ion-icon>Ajouter une formation
-        </ion-button>
-        <ion-button fill="clear">
-          <ion-icon slot="start"></ion-icon>Liste des formations
-        </ion-button>
-        <ion-button fill="clear">
-          <ion-icon slot="start"></ion-icon>Liste des utilisateurs
-        </ion-button>
-        <ion-button fill="clear">
-          <ion-icon slot="start"></ion-icon>Liste des idées
-        </ion-button>
-      </ion-buttons>
+        <ion-list>
+          <ion-item>
+            <ion-button fill="clear">Ajouter un evenement</ion-button>
+          </ion-item>
+          <ion-item>
+            <ion-button fill="clear">Ajouter une formation</ion-button>
+          </ion-item>
+          <ion-item>
+            <ion-button fill="clear">Liste des formations</ion-button>
+          </ion-item>
+          <ion-item>
+            <ion-button fill="clear" [routerLink]="['/users']" (click)="modal.dismiss()">Liste des utilisateurs</ion-button>
+          </ion-item>
+          <ion-item>
+            <ion-button fill="clear" [routerLink]="['/ideas']" (click)="modal.dismiss()">Liste des idées</ion-button>
+          </ion-item>
+        </ion-list>
     </ion-content>
   </ng-template>
 </ion-modal>
