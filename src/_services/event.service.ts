@@ -12,10 +12,11 @@ export class EventService {
   events:Event[] = [
     {
       id: 1,
-      date: new Date ('202201-01'),
+      date: new Date ('2024-01-01'),
       title: 'Nouvel An',
       description: 'Fête du Nouvel An avec feux d\'artifice et célébrations dans la ville',
       subscribe: [this.userService.getUser(4)!,this.userService.getUser(1)!,this.userService.getUser(3)!],
+      image: "https://picsum.photos/400/200?random=4",
       author: this.userService.getUser(4)!,
       location: 'Paris, France'
     },
@@ -25,6 +26,7 @@ export class EventService {
       title: 'Poisson d\'Avril',
       description: 'Fête traditionnelle avec des blagues et des farces',
       subscribe: [this.userService.getUser(4)!,this.userService.getUser(1)!,this.userService.getUser(3)!],
+      image: "https://picsum.photos/400/200?random=5",
       author: this.userService.getUser(1)!,
       location: 'Marseille, France'
     },
@@ -34,6 +36,7 @@ export class EventService {
       title: 'Journée de la Victoire',
       description: 'Commémoration de la fin de la Seconde Guerre mondiale',
       subscribe: [this.userService.getUser(5)!,this.userService.getUser(2)!,this.userService.getUser(3)!],
+      image: "https://picsum.photos/400/200?random=5",
       author: this.userService.getUser(2)!,
       location: 'Lyon, France'
     },
@@ -43,6 +46,7 @@ export class EventService {
       title: 'Fête des Mères',
       description: 'Célébration de l\'amour et de l\'appréciation des mères',
       subscribe: [this.userService.getUser(4)!,this.userService.getUser(1)!,this.userService.getUser(3)!],
+      image: "https://picsum.photos/400/200?random=6",
       author: this.userService.getUser(5)!,
       location: 'Toulouse, France'
     },
@@ -52,6 +56,7 @@ export class EventService {
       title: 'Fête Nationale',
       description: 'Célébration de la Révolution française avec des feux d\'artifice et des défilés',
       subscribe: [this.userService.getUser(5)!,this.userService.getUser(2)!,this.userService.getUser(3)!],
+      image: "https://picsum.photos/400/200?random=7",
       author: this.userService.getUser(3)!,
       location: 'Nice, France'
     },
@@ -61,6 +66,7 @@ export class EventService {
       title: 'Journée de l\'Automne',
       description: 'Célébration de la transition vers l\'automne avec des activités en plein air et de la nourriture',
       subscribe: [this.userService.getUser(4)!,this.userService.getUser(1)!,this.userService.getUser(3)!],
+      image: "https://picsum.photos/400/200?random=8",
       author:this.userService.getUser(5)!,
       location: 'Bordeaux, France'
     },
@@ -70,6 +76,7 @@ export class EventService {
       title: 'Halloween',
       description: 'Fête où les gens se déguisent et se divertissent',
       subscribe:[this.userService.getUser(5)!,this.userService.getUser(2)!,this.userService.getUser(3)!],
+      image: "https://picsum.photos/400/200?random=9",
       author: this.userService.getUser(1)!,
       location: 'Lille, France'
     },
@@ -79,6 +86,7 @@ export class EventService {
       title: 'La Toussaint',
       description: 'Commémoration des défunts avec des visites au cimetière et des cérémonies religieuses',
       subscribe: [this.userService.getUser(5)!,this.userService.getUser(2)!,this.userService.getUser(3)!],
+      image: "https://picsum.photos/400/200?random=10",
       author: this.userService.getUser(2)!,
       location: 'Grenoble, France'
     },
@@ -88,6 +96,7 @@ export class EventService {
       title: 'Noël',
       description: 'Célébration de la naissance de Jésus avec des cadeaux, de la nourriture et de la famille',
       subscribe: [this.userService.getUser(4)!,this.userService.getUser(1)!,this.userService.getUser(3)!],
+      image: "https://picsum.photos/400/200",
       author: this.userService.getUser(3)!,
       location: 'Nantes, France'
     },
@@ -97,6 +106,7 @@ export class EventService {
       title: 'Réveillon du Nouvel An',
       description: 'Fête de fin d\'année avec des feux d\'artifice et de la musique pour célébrer l\'arrivée de la nouvelle année',
       subscribe: [this.userService.getUser(5)!,this.userService.getUser(2)!,this.userService.getUser(3)!],
+      image: "https://picsum.photos/400/200",
       author: this.userService.getUser(4)!,
       location: 'Rennes, France'
     },
@@ -106,6 +116,7 @@ export class EventService {
       title: 'Journée de l\'An',
       description: 'Célébration de la nouvelle année avec de la musique et de la danse',
       subscribe: [this.userService.getUser(4)!,this.userService.getUser(1)!,this.userService.getUser(3)!],
+      image: "https://picsum.photos/400/200",
       author: this.userService.getUser(5)!,
       location: 'Saint-Etienne, France'
     },
@@ -115,6 +126,7 @@ export class EventService {
       title: 'Saint-Patrick',
       description: 'Fête célébrant l\'héritage irlandais avec de la musique et de la bière verte',
       subscribe: [this.userService.getUser(4)!,this.userService.getUser(1)!,this.userService.getUser(3)!],
+      image: "https://picsum.photos/400/200?random=1",
       author: this.userService.getUser(1)!,
       location: 'Montpellier, France'
     },
@@ -124,6 +136,7 @@ export class EventService {
       title: 'Poisson d\'Avril',
       description: 'Fête traditionnelle avec des blagues et des farces',
       subscribe: [this.userService.getUser(5)!,this.userService.getUser(2)!,this.userService.getUser(3)!],
+      image: "https://picsum.photos/400/200?random=2",
       author: this.userService.getUser(4)!,
       location: 'Strasbourg, France'
     },
@@ -133,6 +146,7 @@ export class EventService {
       title: 'Journée de la Victoire',
       description: 'Commémoration de la fin de la Seconde Guerre mondiale',
       subscribe: [this.userService.getUser(4)!,this.userService.getUser(1)!,this.userService.getUser(3)!],
+      image: "https://picsum.photos/400/200?random=3",
       author: this.userService.getUser(5)!,
       location: 'Toulon, France'
     }
@@ -154,5 +168,16 @@ export class EventService {
   getOneEvent(id: number):Event | undefined {
     return this.events.find(i => i.id === id);
   }
+
+  addEvent(
+    data:Event  
+    ) {
+    const maxId = this.events.reduce((prev, current) => (prev.id > current.id) ? prev : current).id;
+    data.id = maxId+1;
+    this.events.push(data);
+    console.log(data);    
+  }
+
+  
 
 }

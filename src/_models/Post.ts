@@ -5,6 +5,7 @@ export interface Post {
     title: string
     description: string
     location: string
+    image: string
     author:User
     date: Date
   }
