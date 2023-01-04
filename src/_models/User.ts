@@ -8,8 +8,9 @@ export interface User {
   image: string
   birthday: Date
   email: string
-  formation: Formation | null
+  formation: Formation
   school_location: string
   password: string
+  discord: string
   roles: string[]
 }

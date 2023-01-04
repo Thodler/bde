@@ -1,16 +1,16 @@
 <ion-footer>
   <ion-toolbar>
     <ion-buttons class="ion-justify-content-evenly">
-      <ion-button>
+      <ion-button [routerLink]="['/newsFeed']" routerLinkActive="active-button">
         <ion-icon name="newspaper-outline"></ion-icon>
       </ion-button>
       <ion-button [routerLink]="['/events']">
         <ion-icon name="calendar-number-outline"></ion-icon>
       </ion-button>
-      <ion-button [routerLink]="['/ideaAdd']">
+      <ion-button [routerLink]="['/ideaAdd']" routerLinkActive="active-button">
         <ion-icon name="bulb-outline"></ion-icon>
       </ion-button>
-      <ion-button>
+      <ion-button [routerLink]="['/userProfil']" routerLinkActive="active-button">
         <ion-icon name="person-circle-outline"></ion-icon>
       </ion-button>
     </ion-buttons>

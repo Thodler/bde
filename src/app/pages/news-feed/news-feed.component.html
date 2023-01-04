@@ -1,0 +1,12 @@
+<ion-content>
+  <h1 class="ion-padding-horizontal">Fil d'actualité</h1>
+  <ion-card *ngFor="let news of newsFeed; let index = index">
+    <img alt="Silhouette of mountains" src="https://picsum.photos/400/200?random={{index}}" />
+    <ion-card-header>
+      <ion-card-title>{{ news.title }}</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>{{ news.description }}</ion-card-content>
+  </ion-card>
+</ion-content>

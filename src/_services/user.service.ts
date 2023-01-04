@@ -16,9 +16,10 @@ export class UserService {
       image: "https://picsum.photos/200",
       birthday: new Date("1998-03-15"),
       email: "marie.dupont@gmail.com",
-      formation: this.formationService.getFormationById(2),
+      formation: this.formationService.getFormationById(2)!,
       school_location: "Paris, France",
       password: "motdepasse123",
+      discord: "Marie#7250",
       roles: ["ROLE_BDE", "ROLE_ETUDIANT"]
     },
     {
@@ -29,9 +30,10 @@ export class UserService {
       image: "https://picsum.photos/200",
       birthday: new Date("1996-09-11"),
       email: "paul.martin@gmail.com",
-      formation: this.formationService.getFormationById(6),
+      formation: this.formationService.getFormationById(6)!,
       school_location: "Lyon, France",
       password: "mdpmdp456",
+      discord: "Paul#5430",
       roles: ["ROLE_ETUDIANT"]
     },
     {
@@ -42,9 +44,10 @@ export class UserService {
       image: "https://picsum.photos/200",
       birthday: new Date("1999-01-20"),
       email: "emma.lopez@gmail.com",
-      formation: this.formationService.getFormationById(2),
+      formation: this.formationService.getFormationById(2)!,
       school_location: "Madrid, Espagne",
       password: "mdpemma789",
+      discord: "Emma#7984",
       roles: ["ROLE_ETUDIANT"]
     },
     {
@@ -55,9 +58,10 @@ export class UserService {
       image: "https://picsum.photos/200",
       birthday: new Date("2014-09-16"),
       email: "emma.lopez@gmail.com",
-      formation: this.formationService.getFormationById(1),
+      formation: this.formationService.getFormationById(1)!,
       school_location: "Ajaccio, Corse",
       password: "password",
+      discord: "Elena#7877",
       roles: ["ROLE_ETUDIANT"]
     },
     {
@@ -68,9 +72,10 @@ export class UserService {
       image: "https://picsum.photos/200",
       birthday: new Date("2019-12-23"),
       email: "livia@mail.com",
-      formation: this.formationService.getFormationById(2),
+      formation: this.formationService.getFormationById(2)!,
       school_location: "Ajaccio, Corse",
       password: "mdp",
+      discord: "Livia#9593",
       roles: ["ROLE_ETUDIANT"]
     }
   ]
