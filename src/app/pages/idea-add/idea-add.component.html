@@ -6,6 +6,6 @@
       <ion-textarea placeholder="" name="idea" formControlName="idea" [autoGrow]=true>
       </ion-textarea>
     </ion-item>
-    <ion-button fill="clear" type="submit" [routerLink]="['/ideas']">Poster</ion-button>
+    <ion-button fill="clear" (click)="presentToast('middle')">Poster</ion-button>
   </form>
 </ion-content>
