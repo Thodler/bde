@@ -11,5 +11,6 @@ export interface User {
   formation: Formation
   school_location: string
   password: string
+  discord: string
   roles: string[]
 }
