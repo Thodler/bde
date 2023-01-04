@@ -3,7 +3,7 @@ import {UserService} from "../../../_services/user.service";
 import {User} from "../../../_models/User";
 
 @Component({
-  selector: 'app-user-profil',
+  selector: 'app-user-form-profil',
   templateUrl: './user-profil.component.html',
   styleUrls: ['./user-profil.component.scss'],
 })
