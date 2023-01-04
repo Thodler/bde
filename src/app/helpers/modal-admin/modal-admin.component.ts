@@ -9,6 +9,10 @@ export class ModalAdminComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  presentingElement:any = null;
+
+  ngOnInit() {
+    this.presentingElement = document.querySelector('.ion-page');
+  }
 
 }
