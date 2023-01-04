@@ -1,5 +1,5 @@
-<ion-content class="ion-padding">
-  <h1>A vos Agendas :</h1>
+<ion-content >
+  <h1 class="ion-padding">A vos Agendas :</h1>
 
   <ion-card *ngFor="let event of events; let index = index" id="open-modal{{index}}">
     <!--img alt="Silhouette of mountains" src="https://picsum.photos/200" /-->
@@ -8,7 +8,7 @@
       <ion-card-subtitle>{{event.date| date:'fullDate'}}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-       <ion-modal #modal trigger="open-modal{{index}}">
+      <ion-modal #modal trigger="open-modal{{index}}">
         <ng-template>
           <ion-content>
             <ion-toolbar>
@@ -17,30 +17,37 @@
                 <ion-button (click)="modal.dismiss()">Fermer</ion-button>
               </ion-buttons>
             </ion-toolbar>
-            <ion-card>
-              <img alt="Silhouette of mountains" src="{{event.image}}"/>
-              <ion-card-header>
-                <ion-card-title>{{event.date| date:'fullDate'}}</ion-card-title>
-                <ion-card-subtitle>{{event.location}}</ion-card-subtitle>
-              </ion-card-header>
-            
-              <ion-card-content>
+            <ion-content>
+              <img alt="Silhouette of mountains" src="{{event.image}}" />
+              <ion-header>
+                <h2 class="ion-padding">{{event.date| date:'fullDate'}}</h2>
+                <h2 class="ion-padding">{{event.location}}</h2>
+              </ion-header>
+              <ion-content class="ion-padding">
                 {{event.description}}
-              </ion-card-content>
-              <ion-segment value="détail">
-                <ion-segment-button value="détail">
-                  <ion-label>Détails</ion-label>
-                </ion-segment-button>
-                <ion-segment-button value="users">
-                  <ion-label>Participants</ion-label>
-                </ion-segment-button>
-              </ion-segment>
-            </ion-card>
+                <h2 class="ion-padding">Participants</h2>
+                <ion-list value="participants" *ngFor="let user of event.subscribe">
+                  <ion-item>
+                    <ion-avatar slot="start">
+                      <ion-img src="{{user.image}}"></ion-img>
+                    </ion-avatar>
+                    <ion-label>
+                      <h3>{{user.firstname}} {{user.lastname}}</h3>
+                      <p>Sales Rep</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-list>
+              </ion-content>
+            </ion-content>
           </ion-content>
         </ng-template>
-      </ion-modal>
-    </ion-card-content>
-    <<ion-button>Je participe!</ion-button>
-  </ion-card>
-  </ion-content>
 
+      </ion-modal>
+
+
+    </ion-card-content>
+    <ion-button fill="clear" size="small" color="medium">
+      Je participe!  
+    </ion-button>
+  </ion-card>
+</ion-content>

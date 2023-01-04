@@ -1,7 +1,7 @@
-import { Component, OnInit,ViewChild  } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { EventService } from 'src/_services/event.service';
 import { Event } from '../../../_models/Event';
-import { IonContent } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-event-list',
@@ -18,6 +18,7 @@ export class EventListComponent implements OnInit {
 
   ngOnInit() {
     this.events = this.eventService.getEvents(); 
+    
   }
 
   subscribeEvent(){
