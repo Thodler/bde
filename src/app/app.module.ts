@@ -17,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {UserProfilComponent} from "./helpers/user-profil/user-profil.component";
 import {ModalAdminComponent} from "./helpers/modal-admin/modal-admin.component";
 import {UserFormComponent} from "./forms/user-form/user-form.component";
+import {UserEditComponent} from "./pages/user-edit/user-edit.component";
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {UserFormComponent} from "./forms/user-form/user-form.component";
     NewsFeedComponent,
     UserProfilComponent,
     ModalAdminComponent,
-    UserFormComponent
+    UserFormComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
