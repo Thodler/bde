@@ -77,7 +77,22 @@ export class UserService {
       password: "mdp",
       discord: "Livia#9593",
       roles: ["ROLE_ETUDIANT"]
+    },
+    {
+      id: 6,
+      firstname: "Toto",
+      lastname: "Titi",
+      username: "Tata",
+      image: "https://picsum.photos/200",
+      birthday: new Date("1984-11-01"),
+      email: "toto@mail.com",
+      formation: this.formationService.getFormationById(2)!,
+      school_location: "Ajaccio, Corse",
+      password: "mdp",
+      discord: "Toto#1234",
+      roles: ["ROLE_SUPERADMIN"]
     }
+
   ]
 
   constructor(

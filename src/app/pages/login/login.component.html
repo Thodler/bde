@@ -18,7 +18,7 @@
       <ion-input placeholder="Mot de passe" name="password" formControlName="password"></ion-input>
     </ion-item>
 
-    <ion-button expand="block" class="ion-margin-vertical" [routerLink]="['/newsFeed']">Connexion</ion-button>
+    <ion-button expand="block" class="ion-margin-vertical" [routerLink]="['/newsFeed']" (click)="onSubmit()">Connexion</ion-button>
   </form>
 </ion-content>
 

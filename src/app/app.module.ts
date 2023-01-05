@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID,NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -14,6 +14,10 @@ import {NewsFeedComponent} from "./pages/news-feed/news-feed.component";
 import { IdeaListComponent } from './pages/idea-list/idea-list.component';
 import { IdeaAddComponent } from './pages/idea-add/idea-add.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EventListComponent } from './pages/event-list/event-list.component';
+import { registerLocaleData } from '@angular/common';
+import * as fr from '@angular/common/locales/fr';
+
 import {UserProfilComponent} from "./helpers/user-profil/user-profil.component";
 import {ModalAdminComponent} from "./helpers/modal-admin/modal-admin.component";
 import {UserFormComponent} from "./forms/user-form/user-form.component";
@@ -28,6 +32,7 @@ import {UserEditComponent} from "./pages/user-edit/user-edit.component";
     FooterComponent,
     IdeaListComponent,
     IdeaAddComponent,
+    EventListComponent,
     FooterComponent,
     NewsFeedComponent,
     UserProfilComponent,
@@ -38,10 +43,18 @@ import {UserEditComponent} from "./pages/user-edit/user-edit.component";
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule,
-    ReactiveFormsModule
+    AppRoutingModule, ReactiveFormsModule,
+    ReactiveFormsModule,
+
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: LOCALE_ID, useValue: 'fr-FR'}
+  ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    registerLocaleData(fr.default);
+  }
+}

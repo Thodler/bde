@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { UserService } from 'src/_services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,8 @@ export class LoginComponent implements OnInit {
 
   credentialForm!: FormGroup
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private userService: UserService,
   ) { }
 
   ngOnInit() {
@@ -25,6 +27,9 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.credentialForm)
+
+
+    localStorage.setItem('currentUser', JSON.stringify(this.userService.getUser(6)));
   }
+
 }

@@ -1,0 +1,53 @@
+<ion-content >
+  <h1 class="ion-padding">A vos Agendas :</h1>
+
+  <ion-card *ngFor="let event of events; let index = index" >
+    <!--img alt="Silhouette of mountains" src="https://picsum.photos/200" /-->
+    <ion-card-header>
+      <ion-card-title id="open-modal{{index}}">{{event.title}}</ion-card-title>
+      <ion-card-subtitle>{{event.date| date:'fullDate'}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-modal #modal trigger="open-modal{{index}}">
+        <ng-template>
+          <ion-content>
+            <ion-toolbar>
+              <ion-title>{{event.title}}</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="modal.dismiss()">Fermer</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+            <ion-content>
+              <img alt="Silhouette of mountains" src="{{event.image}}" />
+              <ion-header>
+                <h2 class="ion-padding">{{event.date| date:'fullDate'}}</h2>
+                <h2 class="ion-padding">{{event.location}}</h2>
+              </ion-header>
+              <ion-content class="ion-padding">
+                {{event.description}}
+                <h2 class="ion-padding">Participants</h2>
+                <ion-list value="participants" *ngFor="let user of event.subscribe">
+                  <ion-item>
+                    <ion-avatar slot="start">
+                      <ion-img src="{{user.image}}"></ion-img>
+                    </ion-avatar>
+                    <ion-label>
+                      <h3>{{user.firstname}} {{user.lastname}}</h3>
+                      <p>Sales Rep</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-list>
+              </ion-content>
+            </ion-content>
+          </ion-content>
+        </ng-template>
+
+      </ion-modal>
+
+
+    </ion-card-content>
+    <ion-button fill="clear" size="small" color="medium" (click)="onSubscribeEvent()">
+      Je participe!  
+    </ion-button>
+  </ion-card>
+</ion-content>
