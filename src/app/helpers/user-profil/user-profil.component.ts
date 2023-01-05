@@ -20,7 +20,6 @@ export class UserProfilComponent implements OnInit {
 
   userRandom()
   {
-    const random = Math.floor(Math.random() * this.userService.users.length-1);
-    this.user = this.userService.getUsers()[random];
+    this.user = this.userService.getUserStorage();
   }
 }
