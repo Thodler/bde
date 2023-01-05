@@ -1,48 +1,49 @@
-
 <ion-content>
+
   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
     <ion-fab-button (click)="addPhotoToGallery()">
       <ion-icon name="camera"></ion-icon>
     </ion-fab-button>
   </ion-fab>
+  <form [formGroup]="formUser" (ngSubmit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-label>Prénom</ion-label>
+        <ion-input slot="end" formControlName="firstname"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nom</ion-label>
+        <ion-input slot="end" formControlName="lastname"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Pseudo</ion-label>
+        <ion-input slot="end" formControlName="username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input slot="end" type="email" placeholder="contact@domaine.com" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Password</ion-label>
+        <ion-input type="password" placeholder="Changer le mot de passe" slot="end" formControlName="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Discord</ion-label>
+        <ion-input placeholder="Pseudo" slot="end" formControlName="discord"></ion-input>
+      </ion-item>
+
+      <ion-buttons class="ion-padding-vertical">
+        <ion-button color="danger" [routerLink]="['/userProfil']">Annuler</ion-button>
+        <ion-button color="primary">Modifier</ion-button>
+      </ion-buttons>
+    </ion-list>
+
+  </form>
+
+
 </ion-content>
-<ion-list>
-
-
-    <ion-item>
-      <ion-label>Prenom</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Nom</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Pseudo</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Email</ion-label>
-      <ion-input type="email" placeholder="contact@domaine.com"></ion-input>
-    </ion-item>
-
-   <ion-item>
-     <ion-label>Password</ion-label>
-     <ion-input type="password"></ion-input>
-   </ion-item>
-
-   <ion-item>
-     <ion-label>Discord</ion-label>
-     <ion-input placeholder="Pseudo"></ion-input>
-   </ion-item>
- </ion-list>
-<ion-content>
-  <ion-buttons class="ion-padding-vertical">
-    <ion-button color="danger" [routerLink]="['/userProfil']">Annuler</ion-button>
-    <ion-button color="primary">Modifier</ion-button>
-  </ion-buttons>
-</ion-content>
-
