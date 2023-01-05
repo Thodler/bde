@@ -21,9 +21,8 @@ export class EventListComponent implements OnInit {
     
   }
 
-  subscribeEvent(){
-    
-  }
+  onSubscribeEvent()
+  {}
 
 
 }
