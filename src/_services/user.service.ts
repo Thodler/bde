@@ -117,4 +117,9 @@ export class UserService {
     this.users.push(data);
   }
 
+  getUserStorage(): User
+  {
+    return JSON.parse(localStorage.getItem('currentUser')!);
+  }
+
 }
