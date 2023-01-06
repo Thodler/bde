@@ -9,13 +9,16 @@ import { UserService } from 'src/_services/user.service';
 })
 export class LoginComponent implements OnInit {
 
+
   credentialForm!: FormGroup
+
   constructor(
     private formBuilder: FormBuilder,
     private userService: UserService,
   ) { }
 
   ngOnInit() {
+
     this.credentialForm = this.initForm();
   }
 
@@ -26,10 +29,9 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  onSubmit() {
-
-
-    localStorage.setItem('currentUser', JSON.stringify(this.userService.getUser(6)));
+  onSubmit() {   
+    
   }
+
 
 }

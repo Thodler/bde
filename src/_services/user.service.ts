@@ -13,7 +13,7 @@ export class UserService {
       firstname: "Marie",
       lastname: "Dupont",
       username: "marie.dupont123",
-      image: "https://picsum.photos/200",
+      image: "https://picsum.photos/200?random=10",
       birthday: new Date("1998-03-15"),
       email: "marie.dupont@gmail.com",
       formation: this.formationService.getFormationById(2)!,
@@ -27,7 +27,7 @@ export class UserService {
       firstname: "Paul",
       lastname: "Martin",
       username: "paul.martin456",
-      image: "https://picsum.photos/200",
+      image: "https://picsum.photos/200?random=11",
       birthday: new Date("1996-09-11"),
       email: "paul.martin@gmail.com",
       formation: this.formationService.getFormationById(6)!,
@@ -41,7 +41,7 @@ export class UserService {
       firstname: "Emma",
       lastname: "Lopez",
       username: "emma.lopez789",
-      image: "https://picsum.photos/200",
+      image: "https://picsum.photos/200?random=12",
       birthday: new Date("1999-01-20"),
       email: "emma.lopez@gmail.com",
       formation: this.formationService.getFormationById(2)!,
@@ -55,7 +55,7 @@ export class UserService {
       firstname: "Elena",
       lastname: "Sini",
       username: "elena.sini777",
-      image: "https://picsum.photos/200",
+      image: "https://picsum.photos/200?random=13",
       birthday: new Date("2014-09-16"),
       email: "emma.lopez@gmail.com",
       formation: this.formationService.getFormationById(1)!,
@@ -69,7 +69,7 @@ export class UserService {
       firstname: "Livia",
       lastname: "Roccati",
       username: "Zouzette",
-      image: "https://picsum.photos/200",
+      image: "https://picsum.photos/200?random=14",
       birthday: new Date("2019-12-23"),
       email: "livia@mail.com",
       formation: this.formationService.getFormationById(2)!,
@@ -83,7 +83,7 @@ export class UserService {
       firstname: "Toto",
       lastname: "Titi",
       username: "Tata",
-      image: "https://picsum.photos/200",
+      image: "https://picsum.photos/200?random=15",
       birthday: new Date("1984-11-01"),
       email: "toto@mail.com",
       formation: this.formationService.getFormationById(2)!,
@@ -117,7 +117,7 @@ export class UserService {
     this.users.push(data);
   }
 
-  getUserStorage(): User
+  getUserStorage(): User | null
   {
     return JSON.parse(localStorage.getItem('currentUser')!);
   }

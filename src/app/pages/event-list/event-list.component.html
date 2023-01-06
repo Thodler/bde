@@ -3,16 +3,16 @@
 
   <ion-card *ngFor="let event of events; let index = index" >
     <!--img alt="Silhouette of mountains" src="https://picsum.photos/200" /-->
-    <ion-item  id="open-modal{{index}}" id="open-modal{{index}}">
+    <ion-item>
       <ion-label >{{event.date| date:'fullDate'}}</ion-label>
       <ion-label slot="end">Inscrit: {{event.subscribe.length}}</ion-label>
     </ion-item>
-    <ion-item>
+    <ion-item id="open-modal{{index}}">
       <ion-title>{{event.title}}</ion-title>
       <ion-button slot="end"
-                  [color]=' !event.subscribe.includes(userCurrent) ? "primary": "warning"'
+                  [color]=' !event.subscribe.includes(userCurrent!) ? "primary": "warning"'
                   (click)="onSubscribeEvent(event.subscribe)">
-        {{ !event.subscribe.includes(userCurrent) ? "Je Participe": "Je ne participe plus" }}
+        {{ !event.subscribe.includes(userCurrent!) ? "Je Participe": "Je ne participe plus" }}
       </ion-button>
     </ion-item>
 
@@ -43,7 +43,6 @@
                     </ion-avatar>
                     <ion-label>
                       <h3>{{user.firstname}} {{user.lastname}}</h3>
-                      <p>Sales Rep</p>
                     </ion-label>
                   </ion-item>
                 </ion-list>

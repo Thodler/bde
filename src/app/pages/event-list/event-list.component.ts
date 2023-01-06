@@ -14,7 +14,7 @@ import {exit} from "ionicons/icons";
 export class EventListComponent implements OnInit {
 
   events!: Event[]
-  userCurrent!: User
+  userCurrent!: User | null
   colorButton!:string
   textButton!:string
 
@@ -31,15 +31,15 @@ export class EventListComponent implements OnInit {
   }
 
   checkInscription(inscrits: User[]){
-    return inscrits.includes(this.userCurrent)
+    return inscrits.includes(this.userCurrent!)
   }
   onSubscribeEvent(inscrits: User[]):void
   {
     if(!this.checkInscription(inscrits)){
-      inscrits.push(this.userCurrent)
+      inscrits.push(this.userCurrent!)
     }else{
       inscrits.forEach((user:User , index:number )=> {
-        if(user.id === this.userCurrent.id){
+        if(user.id === this.userCurrent!.id){
           inscrits.splice(index, 1)
         }
       })

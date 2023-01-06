@@ -20,6 +20,13 @@ export class UserProfilComponent implements OnInit {
 
   userRandom()
   {
-    this.user = this.userService.getUserStorage();
+    this.user = this.userService.getUserStorage()!
+  }
+
+  onLogout()
+  {
+    localStorage.clear();
+    location.href="http://localhost:8100/login"
+
   }
 }

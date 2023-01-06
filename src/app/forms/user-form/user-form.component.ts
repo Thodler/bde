@@ -20,7 +20,7 @@ export class UserFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.initForm(this.userService.getUserStorage());
+    this.initForm(this.userService.getUserStorage()!);
   }
 
   initForm(user: User){
